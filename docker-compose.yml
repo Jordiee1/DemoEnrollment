@@ -1,0 +1,32 @@
+services:
+    apache:
+        container_name: apache
+        build:
+          context: .
+        ports:
+            - '8080:80'
+            - '5173:5173'
+        volumes:
+          - ./src:/var/www/SupEnrollment
+          - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+        depends_on:
+          - mysql_db
+
+    mysql_db:
+       container_name: mysql_db
+       image: mysql:8.1
+       environment:
+          MYSQL_DATABASE: laravel
+          MYSQL_ROOT_PASSWORD: root66
+       ports:
+          - 3306:3306
+       volumes:
+          - ./mysql-data:/var/lib/mysql
+
+    phpmyadmin:
+       container_name: phpmyadmin
+       image: phpmyadmin:latest
+       ports:
+          - 9001:80
+       environment:
+          - PMA_ARBITRARY=1
