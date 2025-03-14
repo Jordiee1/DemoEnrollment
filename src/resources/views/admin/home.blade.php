@@ -15,7 +15,13 @@
                         </div>
                     @endif
 
-                    เข้าสู่ระบบสำเร็จ!
+                    <!-- เข้าสู่ระบบสำเร็จ! -->
+
+                    <div class="col-lg-12">
+                        <a class="btn btn-info" href="{{ route("home") }}">
+                            {{ trans('global.home') }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

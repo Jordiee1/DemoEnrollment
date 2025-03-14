@@ -46,10 +46,9 @@
                                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">โปรไฟล์</a>
                                     @endif
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">ลงชื่อออก</a>
-                                        <form id="form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
+                                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                                            {{ trans('global.logout') }}
+                                        </a>
                                     </div>
                                 </li>
                             @else
@@ -64,3 +63,6 @@
         </div>
     </div>
 </header>
+<form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+    {{ csrf_field() }}
+</form>
