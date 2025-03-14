@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-bottom: 100px;">
             @foreach($newestCourses as $course)
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_special_cource">
@@ -52,6 +52,15 @@
                 </div>
             @endforeach
         </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="section_tittle text-center">
+                        <p>All Activities</p>
+                        <h2>กิจกรรมทั้งหมด</h2>
+                    </div>
+                </div>
+            </div>
     </div>
 </section>
 

@@ -12,6 +12,7 @@ class AddRelationshipFieldsToCoursesTable extends Migration
             $table->unsignedInteger('institution_id');
 
             $table->foreign('institution_id', 'institution_fk_538844')->references('id')->on('institutions');
+
         });
     }
 }

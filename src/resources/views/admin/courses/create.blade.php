@@ -21,6 +21,18 @@
                     {{ trans('cruds.course.fields.name_helper') }}
                 </p>
             </div>
+
+            <!-- ช่องสำหรับเลือกวันที่ -->
+            <div class="form-group {{ $errors->has('date') ? 'has-error' : '' }}">
+                <label for="date">{{ trans('cruds.course.fields.date') }}*</label>
+                <input type="date" id="date" name="date" class="form-control" value="{{ old('date', isset($course) ? $course->date : '') }}" required>
+                @if($errors->has('date'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('date') }}
+                    </em>
+                @endif
+
+            </div>
             <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
                 <label for="description">{{ trans('cruds.course.fields.description') }}</label>
                 <textarea id="description" name="description" class="form-control ">{{ old('description', isset($course) ? $course->description : '') }}</textarea>

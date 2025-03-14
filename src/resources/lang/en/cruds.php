@@ -95,6 +95,7 @@ return [
             'description_helper' => '',
             'logo'               => 'โลโก้',
             'logo_helper'        => '',
+            'date'               => 'วันที่จัดกิจกรรม',
             'created_at'         => 'สร้างเมื่อ',
             'created_at_helper'  => '',
             'updated_at'         => 'ปรับปรุงเมื่อ',
