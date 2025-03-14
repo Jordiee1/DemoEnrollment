@@ -10,8 +10,8 @@
                     <img class="img-fluid" src="{{ optional($course->photo)->getUrl() ?? asset('img/no_image.png') }}" alt="">
                 </div>
                 <div class="content_wrapper">
-                    <h4 class="title_top">Description</h4>
-                    <div class="content">
+                    <h4 class="title_top">รายละเอียดกิจกรรม</h4>
+                    <div class="content" style="white-space: pre-line";>
                         {{ $course->description ?? 'No description provided' }}
                     </div>
                 </div>
@@ -35,7 +35,12 @@
                                 <span>{{ $course->getPrice() }}</span>
                             </a>
                         </li>
-
+                        <li>
+                            <a class="justify-content-between d-flex">
+                                <p>วันที่จัดกิจกรรม</p>
+                                <span>{{ $course->date}}</span>
+                            </a>
+                        </li>
                     </ul>
                     <a href="{{ route('enroll.create', $course->id) }}" class="btn_1 d-block">ลงทะเบียนล่วงหน้า</a>
                     <a href="{{ route('enroll.create', $course->id) }}" class="btn_3 d-block">สนใจเข้าร่วมกิจกรรม</a>

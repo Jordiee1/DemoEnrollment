@@ -1,10 +1,17 @@
 @extends('layouts.app')
 @section('content')
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;700&display=swap" rel="stylesheet">
+
 <div class="row justify-content-center">
     <div class="col-md-6">
         <div class="card mx-4">
-            <div class="card-body p-4">
-                <h1>{{ trans('panel.site_title') }}</h1>
+            <div class="card-body p-4" style="
+            font-family: IBM Plex Sans Thai;
+            IBM Plex Sans list-style: thai;
+        ">
+                <h1 style="margin-bottom: 30px;text-align: center;">
+                    <img src="img/single_page_logo.png" alt="logo" style="text-align: center;max-width: 100%;height: auto;">
+                </h1>
 
                 <p class="text-muted">{{ trans('global.login') }}</p>
 

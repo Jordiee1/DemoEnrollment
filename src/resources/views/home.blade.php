@@ -32,7 +32,7 @@
                                 </button>
 
                                 <!-- ปุ่มลงทะเบียน -->
-                                <a href="http://localhost:8080/courses/2" class="btn_4 d-flex align-items-center justify-content-center">
+                                <a href={{ route('courses.show', $course->id) }} class="btn_4 d-flex align-items-center justify-content-center">
                                     <h3 class="mb-0" style="margin-top: 10px;">ลงทะเบียนเข้าร่วม &gt;</h3>                                    </a>
                         </div>
 
@@ -69,7 +69,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-5">
                 <div class="section_tittle text-center">
-                    <p>Instruction</p>
+                    <p>ผู้จัดกิจกรรม</p>
                     <h2>องค์กรผู้นำ</h2>
                 </div>
             </div>

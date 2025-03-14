@@ -19,6 +19,9 @@
 
                     <div class="collapse navbar-collapse main-menu-item justify-content-end"
                         id="navbarSupportedContent">
+
+                            <a class="btn btn-outline-primary ml-3" href="http://localhost:3000">QUIZZ</a>
+
                         <ul class="navbar-nav align-items-center">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('home') }}">หน้าหลัก</a>
@@ -46,9 +49,10 @@
                                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">โปรไฟล์</a>
                                     @endif
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                                            {{ trans('global.logout') }}
-                                        </a>
+                                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">ลงชื่อออก</a>
+                                        <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
                                     </div>
                                 </li>
                             @else
@@ -63,6 +67,3 @@
         </div>
     </div>
 </header>
-<form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
-    {{ csrf_field() }}
-</form>
