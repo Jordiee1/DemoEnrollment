@@ -19,14 +19,14 @@
             <table class=" table table-bordered table-striped table-hover datatable datatable-Course">
                 <thead>
                     <tr>
-                        <th width="10">
-
-                        </th>
                         <th>
                             {{ trans('cruds.course.fields.id') }}
                         </th>
                         <th>
                             {{ trans('cruds.course.fields.name') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.course.fields.date') }}
                         </th>
                         <th>
                             {{ trans('cruds.course.fields.description') }}
@@ -51,14 +51,15 @@
                 <tbody>
                     @foreach($courses as $key => $course)
                         <tr data-entry-id="{{ $course->id }}">
-                            <td>
 
-                            </td>
                             <td>
                                 {{ $course->id ?? '' }}
                             </td>
                             <td>
                                 {{ $course->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $course->date ?? '' }}
                             </td>
                             <td>
                                 {{ $course->description ?? '' }}

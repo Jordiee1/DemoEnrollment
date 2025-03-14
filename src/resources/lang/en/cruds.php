@@ -114,6 +114,7 @@ return [
             'name_helper'        => '',
             'description'        => 'รายละเอียด',
             'description_helper' => '',
+            'date'               => 'วันที่จัดกิจกรรม',
             'photo'              => 'รูปภาพ',
             'photo_helper'       => '',
             'institution'        => 'ผู้จัดกิจกรรม',

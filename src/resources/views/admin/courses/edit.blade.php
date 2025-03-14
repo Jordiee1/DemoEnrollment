@@ -25,7 +25,7 @@
 
                   <!-- ช่องสำหรับเลือกวันที่ -->
                   <div class="form-group {{ $errors->has('date') ? 'has-error' : '' }}">
-                    <label for="date">{{ trans('cruds.course.fields.description') }}*</label>
+                    <label for="date">{{ trans('cruds.course.fields.date') }}*</label>
                     <input type="date" id="date" name="date" class="form-control" value="{{ old('date', isset($course) ? $course->date : '') }}" required>
                     @if($errors->has('date'))
                         <em class="invalid-feedback">
