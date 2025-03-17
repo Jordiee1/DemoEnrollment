@@ -22,6 +22,8 @@ Route::post('enroll/{course}', 'EnrollmentController@store')->name('enroll.store
 Route::get('my-courses', 'EnrollmentController@myCourses')->name('enroll.myCourses')->middleware('auth');
 Route::resource('courses', 'CourseController')->only(['index', 'show']);
 
+Route::get('profile', 'ProfileController@index')->name('profile')->middleware('auth');
+
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'is_admin']], function () {
 
     Route::get('/', 'HomeController@index')->name('dashboard');

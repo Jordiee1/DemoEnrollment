@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-bottom: 100px;">
+        <div class="row footer-section">
             @foreach($newestCourses as $course)
                 <div class="col-sm-6 col-lg-4">
                     <div class="single_special_cource">
