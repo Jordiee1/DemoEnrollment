@@ -14,54 +14,94 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-bottom: 100px;">
-            @foreach($newestCourses as $course)
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_special_cource">
-                        <img src="{{ optional($course->photo)->getUrl() ?? asset('img/no_image.png') }}" class="special_img" alt="">
-                        <div class="special_cource_text">
 
-                            <a href="{{ route('courses.show', $course->id) }}"><h3>{{ $course->name }}</h3></a>
-                            <p>{{ Str::limit($course->description, 100) }}</p>
+        @php
+    // ค้นหากิจกรรมที่มี ID มากที่สุด
+    $course = $newestCourses->sortByDesc('id')->first();
+@endphp
+
+@if($course)
+<div class="row d-flex align-items-center" style="margin-bottom: 100px;">
+    <!-- ซ้าย: รูปภาพขนาดใหญ่ -->
+    <div class="col-md-6">
+        <img src="{{ optional($course->photo)->getUrl() ?? asset('img/no_image.png') }}" class="img-fluid rounded" alt="{{ $course->name }}">
+    </div>
+
+    <!-- ขวา: รายละเอียดกิจกรรม -->
+    <div class="col-md-6">
+        <div class="special_cource_text">
+            <a href="{{ route('courses.show', $course->id) }}">
+                <h2>{{ $course->name }}</h2>
+            </a>
+            <p style="color: black">{{ Str::limit($course->description, 200) }}</p>
+
+            @if($course->institution)
+            <div class="author_info d-flex align-items-center mt-4">
+                <img src="{{ optional($course->institution->logo)->thumbnail ?? asset('img/no_image.png') }}" alt="" class="rounded-circle me-3" width="50">
+                <div class="author_info_text">
+                    <p>ผู้จัดกิจกรรม</p>
+                    <h5><a href="{{ route('courses.index') }}?institution={{ $course->institution->id }}">{{ $course->institution->name }}</a></h5>
+                </div>
+            </div>
+            @endif
+
+            <!-- ปุ่มลงทะเบียน -->
+            <div class="d-flex justify-content-between align-items-center w-100" style="margin-top: 25px;">
 
 
-                            <div class="d-flex justify-content-between align-items-center w-100" style="margin-top: 25px;">
-                                <!-- ปุ่มกดถูกใจ -->
-                                <button class="btn favorite-btn d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-heart"></i>
-                                </button>
+                <!-- ปุ่มลงทะเบียน -->
+                <a href={{ route('courses.show', $course->id) }} class="btn_4 d-flex align-items-center justify-content-center">
+                    <h3 class="mb-0" style="margin-top: 10px;">ลงทะเบียนเข้าร่วม &gt;</h3>                                    </a>
+        </div>
 
-                                <!-- ปุ่มลงทะเบียน -->
-                                <a href={{ route('courses.show', $course->id) }} class="btn_4 d-flex align-items-center justify-content-center">
-                                    <h3 class="mb-0" style="margin-top: 10px;">ลงทะเบียนเข้าร่วม &gt;</h3>                                    </a>
-                        </div>
+        </div>
+    </div>
+</div>
+@endif
 
-                            @if($course->institution)
-                                <div class="author_info">
-                                    <div class="author_img">
-                                        <img src="{{ optional($course->institution->logo)->thumbnail ?? asset('img/no_image.png') }}" alt="" class="rounded-circle">
-                                        <div class="author_info_text">
-                                            <p>ผู้จัดกิจกรรม</p>
-                                            <h5><a href="{{ route('courses.index') }}?institution={{ $course->institution->id }}">{{ $course->institution->name }}</a></h5>
-                                        </div>
+
+
+    <div class="row" style="margin-bottom: 100px;">
+        @foreach($newestCourses as $course)
+            <div class="col-sm-6 col-lg-4">
+                <div class="single_special_cource">
+                    <img src="{{ optional($course->photo)->getUrl() ?? asset('img/no_image.png') }}" class="special_img" alt="">
+                    <div class="special_cource_text">
+
+                        <a href="{{ route('courses.show', $course->id) }}"><h3>{{ $course->name }}</h3></a>
+                        <p>{{ Str::limit($course->description, 100) }}</p>
+
+
+                        <div class="d-flex justify-content-between align-items-center w-100" style="margin-top: 25px;">
+                            <!-- ปุ่มกดถูกใจ -->
+                            <button class="btn favorite-btn d-flex align-items-center justify-content-center">
+                                <i class="fas fa-heart"></i>
+                            </button>
+
+                            <!-- ปุ่มลงทะเบียน -->
+                            <a href={{ route('courses.show', $course->id) }} class="btn_4 d-flex align-items-center justify-content-center">
+                                <h3 class="mb-0" style="margin-top: 10px;">ลงทะเบียนเข้าร่วม &gt;</h3>                                    </a>
+                    </div>
+
+                        @if($course->institution)
+                            <div class="author_info">
+                                <div class="author_img">
+                                    <img src="{{ optional($course->institution->logo)->thumbnail ?? asset('img/no_image.png') }}" alt="" class="rounded-circle">
+                                    <div class="author_info_text">
+                                        <p>ผู้จัดกิจกรรม</p>
+                                        <h5><a href="{{ route('courses.index') }}?institution={{ $course->institution->id }}">{{ $course->institution->name }}</a></h5>
                                     </div>
                                 </div>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-5">
-                    <div class="section_tittle text-center">
-                        <p>All Activities</p>
-                        <h2>กิจกรรมทั้งหมด</h2>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
+        @endforeach
     </div>
+
+    {{-- <a class="" style="color: black" href="http://localhost:3000">กิจกรรมทั้งหมด-></a> --}}
+
 </section>
 
 <section class="blog_part section_padding">
