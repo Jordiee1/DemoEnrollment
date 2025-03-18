@@ -39,13 +39,11 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
-                                        @if (Auth::user()->load('roles')->roles[0]->pivot->role_id !== 3)
+                                        @if (in_array(Auth::user()->load('roles')->roles[0]->pivot->role_id, [1, 2]))
                                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">หน้าแดชบอร์ด</a>
-                                    @else
-                                        <a class="dropdown-item" href="{{ route('home') }}">หน้าหลัก</a>
                                     @endif
 
-                                    @if (Auth::user()->load('roles')->roles[0]->pivot->role_id !== 3)
+                                    @if (Auth::check())
                                         <a class="dropdown-item" href="{{ route('profile') }}">โปรไฟล์</a>
                                     @endif
                                         <div class="dropdown-divider"></div>

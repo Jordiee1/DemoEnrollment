@@ -3,7 +3,7 @@
 Route::get('/home', function () {
 
     if (Auth::user()) {
-        if (Auth::user()->load('roles')->roles[0]->pivot->role_id !== 3) {
+        if (in_array(Auth::user()->load('roles')->roles[0]->pivot->role_id, [1, 2])) {
             return redirect()->route('admin.dashboard')->with('status', session('status'));
         } else {
             return redirect()->route('home')->with('status', session('status'));
