@@ -46,6 +46,42 @@
                     {{ trans('cruds.user.fields.password_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('full_name') ? 'has-error' : '' }}">
+                <label for="full_name">{{ trans('cruds.user.fields.full_name') }}</label>
+                <input type="text" id="full_name" name="full_name" class="form-control">
+                @if($errors->has('full_name'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('full_name') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.user.fields.name_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('student_id') ? 'has-error' : '' }}">
+                <label for="student_id">{{ trans('cruds.user.fields.student_id') }}</label>
+                <input type="text" id="student_id" name="student_id" class="form-control">
+                @if($errors->has('student_id'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('student_id') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.user.fields.name_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('faculty') ? 'has-error' : '' }}">
+                <label for="faculty">{{ trans('cruds.user.fields.faculty') }}</label>
+                <input type="text" id="faculty" name="faculty" class="form-control">
+                @if($errors->has('faculty'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('faculty') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.user.fields.name_helper') }}
+                </p>
+            </div>
             <div class="form-group {{ $errors->has('roles') ? 'has-error' : '' }}">
                 <label for="roles">{{ trans('cruds.user.fields.roles') }}*
                     <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
