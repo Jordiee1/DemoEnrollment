@@ -44,6 +44,30 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.user.fields.full_name') }}
+                        </th>
+                        <td>
+                            {{ $user->full_name }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.user.fields.student_id') }}
+                        </th>
+                        <td>
+                            {{ $user->student_id }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.user.fields.faculty') }}
+                        </th>
+                        <td>
+                            {{ $user->faculty }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             Roles
                         </th>
                         <td>

@@ -29,6 +29,19 @@ class StoreUserRequest extends FormRequest
             'password' => [
                 'required',
             ],
+            'full_name' => [
+                'nullable',
+                'string',
+                'max:100',
+            ],
+            'student_id' => [
+                'integer',
+            ],
+            'faculty' => [
+                'nullable',
+                'string',
+                'max:100',
+            ],
             'roles.*'  => [
                 'integer',
             ],

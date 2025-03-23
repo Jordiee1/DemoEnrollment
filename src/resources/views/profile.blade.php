@@ -11,6 +11,9 @@
 
                 <p> ชื่อบัญชี: {{ $user->name }} </p>
                 <p> อีเมล: {{ $user->email }} </p>
+                <p> ชื่อ-นามสกุล: {{ $user->full_name }} </p>
+                <p> รหัสนักศึกษา: {{ $user->student_id }} </p>
+                <p> คณะ: {{ $user->faculty }} </p>
 
             </div>
         </div>
