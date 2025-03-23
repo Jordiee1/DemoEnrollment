@@ -45,9 +45,7 @@
                                         <a class="dropdown-item" href="{{ route('home') }}">หน้าหลัก</a>
                                     @endif
 
-                                    @if (Auth::user()->load('roles')->roles[0]->pivot->role_id !== 3)
-                                        <a class="dropdown-item" href="{{ route('profile') }}">โปรไฟล์</a>
-                                    @endif
+
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">ลงชื่อออก</a>
                                         <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">

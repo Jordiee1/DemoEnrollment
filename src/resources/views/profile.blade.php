@@ -8,7 +8,7 @@
         <div class="row justify-content-center footer-section">
             <h1>ข้อมูลส่วนตัว</h1>
             <div class="col-xl-12">
-                
+
                 <p> ชื่อบัญชี: {{ $user->name }} </p>
                 <p> อีเมล: {{ $user->email }} </p>
 
