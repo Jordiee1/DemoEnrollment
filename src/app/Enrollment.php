@@ -28,9 +28,9 @@ class Enrollment extends Model
     ];
 
     const STATUS_RADIO = [
-        'awaiting' => 'เปิดลงทะเบียนล่วงหน้า',
-        'accepted' => 'ลงทะเบียนตอนนี้',
-        'rejected' => 'ปิดการลงทะเบียน',
+        'awaiting' => 'ระบบกำลังรอลงทะเบียน',
+        'accepted' => 'ลงทะเบียนล่วงหน้าสำเร็จ',
+        'rejected' => 'ลงทะเบียนไม่สำเร็จ',
     ];
 
     protected static function boot()

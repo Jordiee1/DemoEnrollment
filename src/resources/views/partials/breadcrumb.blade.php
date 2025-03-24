@@ -5,7 +5,7 @@
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
                         <h2>{{ $breadcrumb }}</h2>
-                        <p><a href="{{ route('home') }}">หน้าหลัก</a><span>/</span><a href="{{ url()->current() }}">รายการลงทะเบียน</a></p>
+                        <p><a href="{{ route('home') }}"  style="color: white">หน้าหลัก</a><span>/</span><a href="{{ url()->current() }}"  style="color: white">กิจกรรมทั้งหมด</a></p>
                     </div>
                 </div>
             </div>
