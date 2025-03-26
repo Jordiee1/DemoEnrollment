@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<img src="http://localhost:8090/img/bg_hompage.png" class="banner-img" alt="Homepage Banner" style="/* position: relative; */ overflow: hidden; object-fit: cover; position: absolute;">
+<img src="http://localhost:8080/img/bg_hompage.png" class="banner-img" alt="Homepage Banner" style="/* position: relative; */ overflow: hidden; object-fit: cover; position: absolute;">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <section class="special_cource padding_top">
