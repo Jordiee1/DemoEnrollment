@@ -39,8 +39,8 @@
             <div class="author_info d-flex align-items-center mt-4">
                 <img src="{{ optional($course->institution->logo)->thumbnail ?? asset('img/no_image.png') }}" alt="" class="rounded-circle me-3" width="50">
                 <div class="author_info_text">
-                    <p>ผู้จัดกิจกรรม</p>
-                    <h5><a href="{{ route('courses.index') }}?institution={{ $course->institution->id }}">{{ $course->institution->name }}</a></h5>
+                    <p  style="color: rgb(121, 121, 121) ; margin-left: 20px">ผู้จัดกิจกรรม</p>
+                    <h5><a href="{{ route('courses.index') }}?institution={{ $course->institution->id }}" style="color: black ; margin-left: 20px">{{ $course->institution->name }}</a></h5>
                 </div>
             </div>
             @endif

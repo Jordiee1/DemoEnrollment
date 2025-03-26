@@ -47,7 +47,7 @@ class EnrollmentController extends Controller
 
     public function myCourses()
     {
-        $breadcrumb = "My Courses";
+        $breadcrumb = "กิจกรรมที่ลงทะเบียนแล้ว";
 
         $userEnrollments = auth()->user()
             ->enrollments()

@@ -5,23 +5,20 @@
 
 <section class="blog_part section_padding">
     <div class="container">
-        <div class="row justify-content-center footer-section">
-            <h1>ข้อมูลส่วนตัว</h1>
-            <div class="col-xl-12">
-
-                <p> ชื่อบัญชี: {{ $user->name }} </p>
-                <p> อีเมล: {{ $user->email }} </p>
-                <p> ชื่อ-นามสกุล: {{ $user->full_name }} </p>
-                <p> รหัสนักศึกษา: {{ $user->student_id }} </p>
-                <p> คณะ: {{ $user->faculty }} </p>
-
-            </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="card shadow-lg p-4 rounded-3 border-40" style="border-radius: 40px; margin-top: 40px;">
+                    <div class="card-body text-center">
+                        <h1 class="mb-4"><i class="fas fa-user-circle"></i> ข้อมูลส่วนตัว</h1>
+                        <hr>
+                        <p><strong><i class="fas fa-user"></i> ชื่อบัญชี:</strong> จีด้าซ่า2547</p>
+                        <p><strong><i class="fas fa-envelope"></i> อีเมล:</strong> m0984816772@gmail.com</p>
+                        <p><strong><i class="fas fa-id-card"></i> ชื่อ-นามสกุล:</strong> นางสาวจิดาภา  สีเพชร</p>
+                        <p><strong><i class="fas fa-graduation-cap"></i> รหัสนักศึกษา:</strong> 661310097</p>
+                        <p><strong><i class="fas fa-university"></i> คณะ:</strong> คณะเทคโนโลยีสารสนเทศฯ</p>
+                    </div>
+                </div>
         </div>
-
-        {{-- <div class="row justify-content-center">
-            <h1>กิจกรรมที่กดสนใจ</h1>
-        </div> --}}
-
     </div>
 </section>
 @endsection

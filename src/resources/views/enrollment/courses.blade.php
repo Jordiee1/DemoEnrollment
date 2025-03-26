@@ -4,11 +4,7 @@
 <section class="special_cource padding_top">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-5">
-                <div class="section_tittle text-center">
-                    <h2>กิจกรรมที่ลงทะเบียนแล้ว</h2>
-                </div>
-            </div>
+
         </div>
         <div class="row">
             @foreach($userEnrollments as $enrollment)
