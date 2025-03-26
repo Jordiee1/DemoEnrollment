@@ -13,7 +13,7 @@ Route::get('/home', function () {
     return redirect()->route('home');
 });
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('enroll/login/{course}', 'EnrollmentController@handleLogin')->name('enroll.handleLogin')->middleware('auth');
