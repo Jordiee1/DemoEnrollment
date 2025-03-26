@@ -39,12 +39,16 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
-                                        @if (in_array(Auth::user()->load('roles')->roles[0]->pivot->role_id, [1, 2]))
+
+                                    @if (in_array(Auth::user()->load('roles')->roles[0]->pivot->role_id, [1, 2]))
                                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">หน้าแดชบอร์ด</a>
                                     @endif
 
+                                    @if (Auth::check())
+                                        <a class="dropdown-item" href="{{ route('profile') }}">โปรไฟล์</a>
+                                    @endif
 
-                                        <div class="dropdown-divider"></div>
+                                    <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">ลงชื่อออก</a>
                                         <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}

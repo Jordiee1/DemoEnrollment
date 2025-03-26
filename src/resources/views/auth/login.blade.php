@@ -80,11 +80,13 @@
 
                     <!-- ปุ่มสมัครบัญชีใหม่ อยู่แยกออกมาใต้ฟอร์ม -->
                     @if(Route::has('register'))
-                        <a class="btn btn-success btn-block d-block text-center mt-3" href="{{ route('register') }}">
-                            สมัครบัญชีใหม่
+                    <div class="text-center mt-3">
+                        <span style="color: gray; font-weight: 300;">ยังไม่มีบัญชี?</span>
+                        <a class="fw-bold text-decoration-underline" href="http://localhost:8080/register" style="color: rgb(39, 164, 209);">
+                            สมัครเลย
                         </a>
-                    @endif
-
+                    </div>
+                @endif
                 </form>
             </div>
         </div>

@@ -63,7 +63,7 @@ return [
             'updated_at_helper'        => '',
             'deleted_at'               => 'ลบเมื่อ',
             'deleted_at_helper'        => '',
-            'institution'              => 'สถาบัน',
+            'institution'              => 'ผู้จัดกิจกรรม',
             'institution_helper'       => '',
         ],
     ],

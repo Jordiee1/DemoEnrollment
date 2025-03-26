@@ -18,9 +18,9 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        {{-- <div class="row justify-content-center">
             <h1>กิจกรรมที่กดสนใจ</h1>
-        </div>
+        </div> --}}
 
     </div>
 </section>
