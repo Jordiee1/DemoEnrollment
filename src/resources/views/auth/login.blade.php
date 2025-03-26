@@ -73,11 +73,18 @@
                             @if(Route::has('password.request'))
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
                                     {{ trans('global.forgot_password') }}
-                                </a><br>
+                                </a>
                             @endif
-
                         </div>
                     </div>
+
+                    <!-- ปุ่มสมัครบัญชีใหม่ อยู่แยกออกมาใต้ฟอร์ม -->
+                    @if(Route::has('register'))
+                        <a class="btn btn-success btn-block d-block text-center mt-3" href="{{ route('register') }}">
+                            สมัครบัญชีใหม่
+                        </a>
+                    @endif
+
                 </form>
             </div>
         </div>
