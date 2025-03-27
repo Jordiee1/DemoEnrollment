@@ -50,6 +50,9 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'full_name' => ['required', 'string', 'max:255'],
+            'student_id' => ['required', 'string', 'max:10', 'unique:users'], // รหัสต้องไม่ซ้ำ
+            'faculty' => ['required', 'string', 'in:คณะสัตวศาสตร์ฯ,คณะวิทยาการจัดการ,คณะเทคโนโลยีสารสนเทศฯ'], // ตรวจสอบค่าที่เลือก
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -64,12 +67,15 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $user = User::create([
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => Hash::make($data['password']),
-            ]);
+            'name' => $data['name'],
+            'full_name' => $data['full_name'],
+            'student_id' => $data['student_id'],
+            'faculty' => $data['faculty'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
 
-        $user->roles()->sync([3]);
+        $user->roles()->sync([3]); // กำหนด role ให้ user
 
         return $user;
     }
