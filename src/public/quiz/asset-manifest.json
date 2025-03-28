@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/quiz/static/css/main.7357d216.css",
+    "main.js": "/quiz/static/js/main.2fb9dd57.js",
+    "static/js/453.07d22090.chunk.js": "/quiz/static/js/453.07d22090.chunk.js",
+    "static/media/SUMScamp.jpg": "/quiz/static/media/SUMScamp.a94054ea781887a17929.jpg",
+    "static/media/SMA.jpg": "/quiz/static/media/SMA.85997bdbd95552815617.jpg",
+    "static/media/SARIMgames.jpg": "/quiz/static/media/SARIMgames.5c2397eb5fd25471dcf7.jpg",
+    "static/media/กิจกรรมอบรมพัฒนานักศึกษา.jpg": "/quiz/static/media/กิจกรรมอบรมพัฒนานักศึกษา.3191fceeb9930d35fd08.jpg",
+    "static/media/SUPcleaning.jpg": "/quiz/static/media/SUPcleaning.19276465587f2d9d02b2.jpg",
+    "static/media/sup-logo.png": "/quiz/static/media/sup-logo.075921f0b8e668ec9def.png",
+    "static/media/SUPaerobic.jpg": "/quiz/static/media/SUPaerobic.f5de0b1585056bc86ef0.jpg",
+    "static/media/SUPmarket.jpg": "/quiz/static/media/SUPmarket.3dce9282232833cf8d28.jpg",
+    "static/media/Freshygames.jpg": "/quiz/static/media/Freshygames.7dae4f5c38eaa24f848c.jpg",
+    "index.html": "/quiz/index.html",
+    "main.7357d216.css.map": "/quiz/static/css/main.7357d216.css.map",
+    "main.2fb9dd57.js.map": "/quiz/static/js/main.2fb9dd57.js.map",
+    "453.07d22090.chunk.js.map": "/quiz/static/js/453.07d22090.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7357d216.css",
+    "static/js/main.2fb9dd57.js"
+  ]
+}
