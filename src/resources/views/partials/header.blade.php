@@ -20,7 +20,7 @@
                     <div class="collapse navbar-collapse main-menu-item justify-content-end"
                         id="navbarSupportedContent">
 
-                            <a class="btn btn-outline-primary ml-3" href="http://localhost:3000">QUIZZ</a>
+                            <a class="btn btn-outline-primary ml-3" href="{{ route('quiz') }}">QUIZZ</a>
 
                         <ul class="navbar-nav align-items-center">
                             <li class="nav-item">

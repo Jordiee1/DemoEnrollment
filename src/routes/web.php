@@ -24,6 +24,8 @@ Route::resource('courses', 'CourseController')->only(['index', 'show']);
 
 Route::get('profile', 'ProfileController@index')->name('profile')->middleware('auth');
 
+Route::get('quiz', function () { return view('quiz'); })->name('quiz');
+
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth', 'is_admin']], function () {
 
     Route::get('/', 'HomeController@index')->name('dashboard');
