@@ -11,11 +11,11 @@
                     <div class="card-body text-center">
                         <h1 class="mb-4"><i class="fas fa-user-circle"></i> ข้อมูลส่วนตัว</h1>
                         <hr>
-                        <p><strong><i class="fas fa-user"></i> ชื่อบัญชี:</strong> จีด้าซ่า2547</p>
-                        <p><strong><i class="fas fa-envelope"></i> อีเมล:</strong> m0984816772@gmail.com</p>
-                        <p><strong><i class="fas fa-id-card"></i> ชื่อ-นามสกุล:</strong> นางสาวจิดาภา  สีเพชร</p>
-                        <p><strong><i class="fas fa-graduation-cap"></i> รหัสนักศึกษา:</strong> 661310097</p>
-                        <p><strong><i class="fas fa-university"></i> คณะ:</strong> คณะเทคโนโลยีสารสนเทศฯ</p>
+                        <p><strong><i class="fas fa-user"></i> ชื่อบัญชี:</strong>{{$user->name}}</p>
+                        <p><strong><i class="fas fa-envelope"></i> อีเมล:</strong> {{$user->email}}</p>
+                        <p><strong><i class="fas fa-id-card"></i> ชื่อ-นามสกุล:</strong> {{$user->full_name}}</p>
+                        <p><strong><i class="fas fa-graduation-cap"></i> รหัสนักศึกษา:</strong> {{$user->student_id}}</p>
+                        <p><strong><i class="fas fa-university"></i> คณะ:</strong> {{$user->faculty}}</p>
                     </div>
                 </div>
         </div>

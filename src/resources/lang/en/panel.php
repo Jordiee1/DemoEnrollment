@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Courses Enrollment',
+    'site_title' => 'SUPVENTHUB | Login',
 ];
