@@ -49,7 +49,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'username' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'full_name' => ['required', 'string', 'max:255'],
             'student_id' => ['required', 'string', 'max:10', 'unique:users'], // รหัสต้องไม่ซ้ำ
             'faculty' => ['required', 'string', 'in:คณะสัตวศาสตร์ฯ,คณะวิทยาการจัดการ,คณะเทคโนโลยีสารสนเทศฯ'], // ตรวจสอบค่าที่เลือก

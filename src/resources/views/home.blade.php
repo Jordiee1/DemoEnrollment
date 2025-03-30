@@ -18,7 +18,7 @@
         </div>
 
         @php
-            $course = $newestCourses->sortByDesc('id')->first();
+            $course = $newestCourses->sortByDesc('date')->first();
         @endphp
 
         @if($course)
